@@ -4,6 +4,7 @@
   --secondary-color: #2c4755;
   --section-padding: 60px;
   --section-background: #f6f6f6;
+  --transition-duration: 0.3s;
 }
 /* End Variables */
 /* Start Global Rules */
@@ -11,6 +12,9 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
 }
 body {
   font-family: 'Work Sans', sans-serif;
@@ -99,7 +103,7 @@ body {
 }
 .header .links .icon span:nth-child(2) {
   width: 60%;
-  transition: 0.3s;
+  transition: var(--transition-duration);
 }
 .header .links .icon span:last-child {
   width: 100%;
@@ -133,7 +137,7 @@ body {
   padding: 15px;
   text-decoration: none;
   color: #333;
-  transition: 0.3s;
+  transition: var(--transition-duration);
 }
 .header .links ul li a:hover {
   padding-left: 25px;
