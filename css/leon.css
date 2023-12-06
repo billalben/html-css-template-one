@@ -2,6 +2,7 @@
 :root {
   --main-color: #10cab7;
   --secondary-color: #2c4755;
+  --paragraph-color: #6e6969;
   --section-padding: 60px;
   --section-background: #f6f6f6;
   --transition-duration: 0.3s;
@@ -24,6 +25,9 @@ body {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+}
+p {
+  color: var(--paragraph-color);
 }
 /* Small */
 @media (min-width: 768px) {
@@ -57,8 +61,6 @@ body {
   margin: -30px 0 0;
   font-size: 20px;
   text-align: center;
-  color: #797979;
-
 }
 @media (max-width: 767px) {
   .special-heading {
@@ -197,7 +199,6 @@ body {
 }
 .features .feat p {
   line-height: 1.8;
-  color: #777;
   font-size: 17px;
 }
 /* End Features */
@@ -233,7 +234,6 @@ body {
   margin: 0 0 20px;
 }
 .services .services-content .srv .text p {
-  color: #444;
   font-weight: 300;
 }
 .services .services-content .image {
@@ -284,7 +284,6 @@ body {
   margin: 0;
 }
 .portfolio .portfolio-content .card .info p {
-  color: #777;
   line-height: 1.6;
   margin-bottom: 0;
 }
@@ -361,7 +360,6 @@ body {
 }
 .about .about-content .text p:last-of-type {
   line-height: 2;
-  color: #777;
 }
 /* End About */
 /* Start contact */
