@@ -47,6 +47,28 @@ img {
   text-align: center;
 }
 
+.scroll-up {
+  position: fixed;
+  z-index: 1000;
+  bottom: 1.5rem;
+  right: -3.25rem;
+  background-color: #677c92;
+  border-radius: 50%;
+  transition: transform var(--transition-duration), right var(--transition-duration);
+}
+.scroll-up.show {
+  right: 1.5rem;
+}
+.scroll-up:hover {
+  transform: scale(1.1);
+}
+.scroll-up i {
+  padding: .75rem;
+  font-size: 1.5rem;
+  color: #ebd8d8;
+  cursor: pointer;
+}
+
 /* ============= Start Header ============= */
 .header {
   padding: 1.25rem;
