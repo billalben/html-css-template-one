@@ -10,7 +10,7 @@ This project served as a valuable learning experience.
 
 ### Screenshot
 
-[![Homepage](homepage.png)](https://billalben.github.io/html-css-template-one/)
+[![Homepage](Homepage.png)](https://billalben.github.io/html-css-template-one/)
 
 ### Technologies Used
 
