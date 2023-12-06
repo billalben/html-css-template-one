@@ -21,10 +21,8 @@ body {
   font-family: "Work Sans", sans-serif;
 }
 .container {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin-left: auto;
-  margin-right: auto;
+  padding-inline: 1rem;
+  margin-inline: auto;
 }
 p {
   color: var(--paragraph-color);
@@ -60,6 +58,7 @@ img {
 }
 .header .logo {
   width: 60px;
+  cursor: pointer;
 }
 .header .links {
   position: relative;
@@ -235,6 +234,8 @@ img {
 }
 .portfolio .portfolio-content .card {
   background-color: white;
+  border-radius: .5rem;
+  overflow: hidden;
 }
 .portfolio .portfolio-content .card .info {
   padding: 1.25rem;
@@ -362,7 +363,6 @@ img {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1rem;
   }
-
   .services .services-content .srv {
     flex-direction: column;
     row-gap: 1rem;
@@ -372,11 +372,10 @@ img {
 
   .features .container {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    column-gap: .75rem;
+    column-gap: 0.75rem;
   }
-
   .features .feat {
-    padding: .5rem;
+    padding: 0.5rem;
   }
   .features .feat h3 {
     margin-block: 1rem;
@@ -392,11 +391,9 @@ img {
     flex-direction: column;
     text-align: center;
   }
-
   .about .about-content .image {
     margin: 0 auto 3.25rem;
   }
-
   .about .about-content .image::before,
   .about .about-content .image::after {
     display: none;
