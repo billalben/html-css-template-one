@@ -3,7 +3,7 @@
   --main-color: #10cab7;
   --secondary-color: #2c4755;
   --paragraph-color: #6e6969;
-  --section-padding: 60px;
+  --section-padding: 4rem;
   --section-background: #f6f6f6;
   --transition-duration: 0.3s;
 }
@@ -21,13 +21,17 @@ body {
   font-family: 'Work Sans', sans-serif;
 }
 .container {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 1rem;
+  padding-right: 1rem;
   margin-left: auto;
   margin-right: auto;
 }
 p {
   color: var(--paragraph-color);
+  line-height: 1.6;
+}
+img {
+  max-width: 100%;
 }
 /* Small */
 @media (min-width: 768px) {
@@ -50,8 +54,8 @@ p {
 /* End Global Rules */
 /* Start Components */
 .special-heading {
-  color: #ebeced;
-  font-size: 100px;
+  color: #677c92;
+  font-size: 6.25rem;
   text-align: center;
   font-weight: 800;
   letter-spacing: -3px;
@@ -59,7 +63,7 @@ p {
 }
 .special-heading + p {
   margin: -30px 0 0;
-  font-size: 20px;
+  font-size: 1.25rem;
   text-align: center;
 }
 @media (max-width: 767px) {
@@ -73,7 +77,7 @@ p {
 /* End Components */
 /* Start Header */
 .header {
-  padding: 20px;
+  padding: 1.25rem;
 }
 .header .container {
   display: flex;
@@ -97,7 +101,7 @@ p {
 }
 .header .links .icon span {
   background-color: #333;
-  margin-bottom: 5px;
+  margin-bottom: .25rem;
   height: 2px;
 }
 .header .links .icon span:first-child {
@@ -124,7 +128,7 @@ p {
 }
 .header .links ul::before {
   content: "";
-  border-width: 10px;
+  border-width: 1.625rem;
   border-style: solid;
   border-color: transparent transparent #f6f6f6 transparent;
   position: absolute;
@@ -136,7 +140,7 @@ p {
 }
 .header .links ul li a {
   display: block;
-  padding: 15px;
+  padding: 1rem;
   text-decoration: none;
   color: #333;
   transition: var(--transition-duration);
@@ -167,12 +171,11 @@ p {
 .landing .intro-text h1 {
   margin: 0;
   font-weight: bold;
-  font-size: 45px;
+  font-size: 2.75rem;
   color: var(--main-color);
 }
 .landing .intro-text p {
-  font-size: 19px;
-  line-height: 1.8;
+  font-size: 1.25rem;
 }
 /* End Landing Section  */
 /* Start Features */
@@ -183,11 +186,16 @@ p {
 }
 .features .container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.25rem;
+}
+@media (max-width: 767px) {
+  .features .container {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
 }
 .features .feat {
-  padding: 20px;
+  padding: 1.25rem;
   text-align: center;
 }
 .features .feat i {
@@ -195,11 +203,10 @@ p {
 }
 .features .feat h3 {
   font-weight: 800;
-  margin: 30px 0;
+  margin: 2rem 0;
 }
 .features .feat p {
-  line-height: 1.8;
-  font-size: 17px;
+  font-size: 1rem;
 }
 /* End Features */
 /* Start Service */
@@ -209,29 +216,34 @@ p {
 }
 .services .services-content {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem;
   margin-top: 100px;
+}
+@media (max-width: 767px) {
+  .services .services-content {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+  }
 }
 .services .services-content .srv {
   display: flex;
-  margin-bottom: 40px;
+  column-gap: 1rem;
+  margin-bottom: 2.5rem;
 }
 @media (max-width: 767px) {
   .services .services-content .srv {
     flex-direction: column;
+    row-gap: 1rem;
     text-align: center;
   }
 }
 .services .services-content .srv i {
   color: var(--main-color);
-  flex-basis: 60px;
-}
-.services .services-content .srv .text {
-  flex: 1;
 }
 .services .services-content .srv .text h3 {
-  margin: 0 0 20px;
+  margin: 0 0 1.25rem;
 }
 .services .services-content .srv .text p {
   font-weight: 300;
@@ -268,33 +280,29 @@ p {
 .portfolio .portfolio-content {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 30px;
-  margin-top: 80px;
+  grid-gap: 2rem;
+  margin-top: 5rem;
 }
 .portfolio .portfolio-content .card {
   background-color: white;
 }
-.portfolio .portfolio-content .card img {
-  max-width: 100%;
-}
 .portfolio .portfolio-content .card .info {
-  padding: 20px;
+  padding: 1.25rem;
 }
 .portfolio .portfolio-content .card .info h3 {
   margin: 0;
 }
 .portfolio .portfolio-content .card .info p {
-  line-height: 1.6;
   margin-bottom: 0;
 }
 /* End Portfolio */
 /* Start About */
 .about {
   padding-top: var(--section-padding);
-  padding-bottom: calc(var(--section-padding) + 60px);
+  padding-bottom: calc(var(--section-padding) + 3.75rem);
 }
 .about .about-content {
-  margin-top: 100px;
+  margin-top: 6.25rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -312,7 +320,7 @@ p {
 }
 @media (max-width: 991px) {
   .about .about-content .image {
-    margin: 0 auto 60px;
+    margin: 0 auto 3.25rem;
   }
 }
 .about .about-content .image::before {
@@ -341,9 +349,6 @@ p {
   .about .about-content .image::after {
     display: none;
   }
-}
-.about .about-content .image img {
-  max-width: 100%;
 }
 .about .about-content .text {
   flex-basis: calc(100% - 500px);
@@ -374,15 +379,15 @@ p {
   text-align: center;
 }
 .contact .info .label {
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: 800;
   color: var(--secondary-color);
   letter-spacing: -1px;
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
 }
 .contact .info .link {
   display: block;
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: 800;
   color: var(--main-color);
   text-decoration: none;
@@ -390,17 +395,17 @@ p {
 .contact .info .social {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
-  font-size: 16px;
+  margin-top: 1.25rem;
+  font-size: 1rem;
 }
 .contact .info .social i {
-  margin-left: 10px;
+  margin-left: 0.625rem;
   color: var(--secondary-color);
 }
 @media (max-width: 767px) {
   .contact .info .label,
   .contact .info .link {
-    font-size: 25px;
+    font-size: 1.625rem;
   }
 }
 /* End contact */
@@ -408,9 +413,9 @@ p {
 .footer {
   background-color: var(--secondary-color);
   color: white;
-  padding: 30px 10px;
+  padding: 2rem 0.625rem;
   text-align: center;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 .footer span {
   font-weight: bold;
