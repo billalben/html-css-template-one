@@ -1,4 +1,4 @@
-/* Start Variables */
+/* ============= Start Variables ============= */
 :root {
   --main-color: #10cab7;
   --secondary-color: #2c4755;
@@ -7,8 +7,8 @@
   --section-background: #f6f6f6;
   --transition-duration: 0.3s;
 }
-/* End Variables */
-/* Start Global Rules */
+
+/* ============= Start Global Rules ============= */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -18,7 +18,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
 }
 .container {
   padding-left: 1rem;
@@ -33,26 +33,8 @@ p {
 img {
   max-width: 100%;
 }
-/* Small */
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
-}
-/* Medium */
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-}
-/* Large */
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
-}
-/* End Global Rules */
-/* Start Components */
+
+/* ============= Start Components ============= */
 .special-heading {
   color: #677c92;
   font-size: 6.25rem;
@@ -66,16 +48,8 @@ img {
   font-size: 1.25rem;
   text-align: center;
 }
-@media (max-width: 767px) {
-  .special-heading {
-    font-size: 60px;
-  }
-  .special-heading + p {
-    margin-top: -20px;
-  }
-}
-/* End Components */
-/* Start Header */
+
+/* ============= Start Header ============= */
 .header {
   padding: 1.25rem;
 }
@@ -102,7 +76,7 @@ img {
 }
 .header .links .icon span {
   background-color: #333;
-  margin-bottom: .25rem;
+  margin-bottom: 0.25rem;
   height: 3px;
   border-radius: 3px;
 }
@@ -153,8 +127,8 @@ img {
 .header .links ul li:not(:last-child) a {
   border-bottom: 1px solid #ddd;
 }
-/* End Header */
-/* Start Landing Section  */
+
+/* ============= Start Landing ============= */
 .landing {
   background-image: url(../images/mountain.webp);
   background-size: cover;
@@ -179,22 +153,16 @@ img {
 .landing .intro-text p {
   font-size: 1.25rem;
 }
-/* End Landing Section  */
-/* Start Features */
+
+/* ============= Start Features ============= */
 .features {
-  padding-top: var(--section-padding);
-  padding-bottom: var(--section-padding);
+  padding-block: var(--section-padding);
   background-color: var(--section-background);
 }
 .features .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1.25rem;
-}
-@media (max-width: 767px) {
-  .features .container {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  }
 }
 .features .feat {
   padding: 1.25rem;
@@ -210,11 +178,10 @@ img {
 .features .feat p {
   font-size: 1rem;
 }
-/* End Features */
-/* Start Service */
+
+/* ============= Start Service ============= */
 .services {
-  padding-top: var(--section-padding);
-  padding-bottom: var(--section-padding);
+  padding-block: var(--section-padding);
 }
 .services .services-content {
   display: grid;
@@ -223,23 +190,10 @@ img {
   gap: 2rem;
   margin-top: 100px;
 }
-@media (max-width: 767px) {
-  .services .services-content {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1rem;
-  }
-}
 .services .services-content .srv {
   display: flex;
   column-gap: 1rem;
   margin-bottom: 2.5rem;
-}
-@media (max-width: 767px) {
-  .services .services-content .srv {
-    flex-direction: column;
-    row-gap: 1rem;
-    text-align: center;
-  }
 }
 .services .services-content .srv i {
   color: var(--main-color);
@@ -267,16 +221,10 @@ img {
 .services .services-content .image img {
   width: 260px;
 }
-@media (max-width: 1199px) {
-  .image-column {
-    display: none;
-  }
-}
-/* End Service */
-/* Start Portfolio */
+
+/* ============= Start Portfolio ============= */
 .portfolio {
-  padding-top: var(--section-padding);
-  padding-bottom: var(--section-padding);
+  padding-block: var(--section-padding);
   background-color: var(--section-background);
 }
 .portfolio .portfolio-content {
@@ -297,11 +245,10 @@ img {
 .portfolio .portfolio-content .card .info p {
   margin-bottom: 0;
 }
-/* End Portfolio */
-/* Start About */
+
+/* ============= Start About ============= */
 .about {
-  padding-top: var(--section-padding);
-  padding-bottom: calc(var(--section-padding) + 3.75rem);
+  padding-block: var(--section-padding);
 }
 .about .about-content {
   margin-top: 6.25rem;
@@ -309,21 +256,10 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-@media (max-width: 991px) {
-  .about .about-content {
-    flex-direction: column;
-    text-align: center;
-  }
-}
 .about .about-content .image {
   position: relative;
   width: 250px;
   height: 375px;
-}
-@media (max-width: 991px) {
-  .about .about-content .image {
-    margin: 0 auto 3.25rem;
-  }
 }
 .about .about-content .image::before {
   content: "";
@@ -346,12 +282,6 @@ img {
   right: -150px;
   top: -40px;
 }
-@media (max-width: 991px) {
-  .about .about-content .image::before,
-  .about .about-content .image::after {
-    display: none;
-  }
-}
 .about .about-content .text {
   flex-basis: calc(100% - 500px);
 }
@@ -368,16 +298,14 @@ img {
 .about .about-content .text p:last-of-type {
   line-height: 2;
 }
-/* End About */
-/* Start contact */
+
+/* ============= Start contact ============= */
 .contact {
-  padding-top: var(--section-padding);
-  padding-bottom: var(--section-padding);
+  padding-block: var(--section-padding);
   background-color: var(--section-background);
 }
 .contact .info {
-  padding-top: var(--section-padding);
-  padding-bottom: var(--section-padding);
+  padding-block: var(--section-padding);
   text-align: center;
 }
 .contact .info .label {
@@ -404,14 +332,8 @@ img {
   margin-left: 0.625rem;
   color: var(--secondary-color);
 }
-@media (max-width: 767px) {
-  .contact .info .label,
-  .contact .info .link {
-    font-size: 1.625rem;
-  }
-}
-/* End contact */
-/* Start Footer */
+
+/* ============= Start Footer ============= */
 .footer {
   background-color: var(--secondary-color);
   color: white;
@@ -423,4 +345,84 @@ img {
   font-weight: bold;
   color: var(--main-color);
 }
-/* End Footer */
+
+/* ============= Media Queries ============= */
+@media (max-width: 767px) {
+  :root {
+    --section-padding: 2rem;
+  }
+  .special-heading {
+    font-size: 3.75rem;
+  }
+  .special-heading + p {
+    margin-top: -20px;
+  }
+
+  .services .services-content {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+  }
+
+  .services .services-content .srv {
+    flex-direction: column;
+    row-gap: 1rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .features .container {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    column-gap: .75rem;
+  }
+
+  .features .feat {
+    padding: .5rem;
+  }
+  .features .feat h3 {
+    margin-block: 1rem;
+  }
+
+  .contact .info .label,
+  .contact .info .link {
+    font-size: 1.625rem;
+  }
+}
+@media (max-width: 991px) {
+  .about .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about .about-content .image {
+    margin: 0 auto 3.25rem;
+  }
+
+  .about .about-content .image::before,
+  .about .about-content .image::after {
+    display: none;
+  }
+}
+@media (max-width: 1199px) {
+  .image-column {
+    display: none;
+  }
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
