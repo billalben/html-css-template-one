@@ -1,16 +1,24 @@
 // ===================  nav button ===================
-const navButton = document.querySelector(".links .icon");
+const navToggleButton = document.querySelector(".links .icon");
+const navLists = navToggleButton.nextElementSibling;
+const navLinks = document.querySelectorAll(".links a");
 
-navButton.addEventListener("click", function (e) {
-  this.nextElementSibling.classList.toggle("open");
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    navLists.classList.remove("open");
+  });
+});
+
+navToggleButton.addEventListener("click", function (e) {
+  navLists.classList.toggle("open");
   e.stopPropagation();
 });
 
 document.addEventListener("click", function (event) {
-  const isClickInsideLinks = event.target.closest(".links");
+  const clickedInsideNav = event.target.closest(".links");
 
-  if (!isClickInsideLinks) {
-    navButton.nextElementSibling.classList.remove("open");
+  if (!clickedInsideNav) {
+    navLists.classList.remove("open");
   }
 });
 
